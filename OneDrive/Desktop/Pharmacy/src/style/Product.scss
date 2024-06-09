@@ -1,0 +1,201 @@
+#products.products {
+
+    //  border: 1px solid green;
+      margin-left: 90px;
+    
+    // height: 50vh;
+    .container {
+       
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+        justify-content: center;
+        padding: 10px 0;
+
+        .child {
+            //  border: 1px solid blue;
+           
+            align-items: end;
+            // width: 300px;
+            display: grid;
+            text-align: center;
+            box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
+            gap: 10px;
+            position: relative;
+
+            .childimage {
+
+                img {
+                    width:9rem;
+                    height: 12rem;
+                    padding: 10px 20px;
+                    margin: auto;
+                }
+
+                img:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .childnamem {
+
+                h2 {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    width: 300px;
+                    margin: auto;
+                    font-size: 20px;
+                }
+
+            }
+
+            .price {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+
+            }
+
+
+            .cartbutton {
+                padding: 15px 20px;
+                width: 80%;
+                margin: 0 10%;
+                border: none;
+                background-color: teal;
+                color: white;
+                margin-bottom: 10px;
+                font-weight: bold;
+                cursor: pointer;
+                font-size: 91%;
+                    line-height: 8px;
+            }
+
+            .fav {
+                position: absolute;
+                right: 5px;
+                top: 0;
+                font-size: 30px;
+            }
+        }
+    }
+
+    .child:hover {
+        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+}
+@media screen and (max-width:1120px) {
+    #products.products {
+    
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+    
+    
+            }
+}
+}
+
+
+@media screen and (max-width: 970px) {
+
+
+    #products.products {
+       
+        .container {
+            width: 100%;
+            grid-template-columns: repeat(1,1fr);
+            margin-left: 30px;
+           
+
+        }
+         .but{
+            flex-direction: column;
+            gap:0px;
+            margin-right: 70px;
+         }
+         .child{
+            margin-right: 100px;
+         }
+
+    }
+
+}
+.but{
+    margin-top: 20px;
+    // border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    // height: 3rem;
+    
+    button{
+        border: 1px solid teal;
+        padding: 10px 0px;
+        border-radius: 10px;
+     
+    }
+  
+    }
+      
+
+.button {
+    border-radius: 4px;
+    background-color: teal;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    &:hover{
+        color: greenyellow;
+        background-color: teal;
+    }
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.count{
+    border: 1px solid teal;
+    // border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    // padding-left: 10px;
+    // padding-bottom: 5px;
+    text-align: center;
+    padding-top: 10%;
+    font-size: 30px;
+    font-weight: 900;
+    border-radius: 50%;
+    background: teal;
+    color: white;
+   
+}
